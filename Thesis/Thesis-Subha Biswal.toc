@@ -1,0 +1,53 @@
+\contentsline {chapter}{Certificate}{i}{dummy.1}%
+\vspace {1em}
+\contentsline {chapter}{Certificate of Approval}{ii}{dummy.2}%
+\vspace {1em}
+\contentsline {chapter}{Declaration}{iii}{dummy.3}%
+\vspace {1em}
+\contentsline {chapter}{Acknowledgement}{iv}{dummy.4}%
+\vspace {1em}
+\contentsline {chapter}{Abstract}{v}{dummy.5}%
+\vspace {1em}
+\contentsline {chapter}{List of Figures}{viii}{dummy.7}%
+\contentsline {chapter}{List of Tables}{ix}{dummy.9}%
+\contentsline {chapter}{Symbols}{x}{dummy.11}%
+\contentsline {chapter}{Abbreviations}{xi}{dummy.14}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.17}%
+\contentsline {section}{\numberline {1.1}Background}{1}{section.18}%
+\contentsline {section}{\numberline {1.2}Literature Review}{2}{section.19}%
+\contentsline {section}{\numberline {1.3}Project Motivation}{8}{section.20}%
+\contentsline {section}{\numberline {1.4}Objectives of the Work}{8}{section.21}%
+\contentsline {section}{\numberline {1.5}Thesis Organisation}{9}{section.26}%
+\contentsline {chapter}{\numberline {2}Overview of Catastrophic Indicators}{10}{chapter.27}%
+\contentsline {section}{\numberline {2.1}General Terminologies used for Stability Assessment}{10}{section.28}%
+\contentsline {section}{\numberline {2.2}Catastrophic Indicators}{11}{section.35}%
+\contentsline {subsection}{\numberline {2.2.1}Indicator based on Coherency}{11}{subsection.36}%
+\contentsline {subsection}{\numberline {2.2.2}Indicator based on Transient Energy Conversion}{12}{subsection.38}%
+\contentsline {subsection}{\numberline {2.2.3}Indicator based on Dot Products (CSA)}{13}{subsection.40}%
+\contentsline {subsection}{\numberline {2.2.4}Wide Area Severity Index (WASI)}{13}{subsection.42}%
+\contentsline {subsection}{\numberline {2.2.5}Inter-area Stability Prediction Index (ISPI)}{14}{subsection.45}%
+\contentsline {subsubsection}{\numberline {2.2.5.1}Thresholds values}{15}{subsubsection.46}%
+\contentsline {subsubsection}{\numberline {2.2.5.2}Reference Values, Deviation Percent}{15}{subsubsection.47}%
+\contentsline {section}{\numberline {2.3}Problem Formulation}{16}{section.58}%
+\contentsline {chapter}{\numberline {3}Solution Methodology}{18}{chapter.59}%
+\contentsline {section}{\numberline {3.1}Introduction}{18}{section.60}%
+\contentsline {section}{\numberline {3.2}MAT-POWER Tool Box}{18}{section.62}%
+\contentsline {subsection}{\numberline {3.2.1}Economic Load Dispatch Example on IEEE-9 Bus System}{20}{subsection.63}%
+\contentsline {section}{\numberline {3.3}MAT-TRANS Software}{20}{section.64}%
+\contentsline {subsection}{\numberline {3.3.1}Pseudo-Code of the MATTRANS Software}{21}{subsection.65}%
+\contentsline {subsection}{\numberline {3.3.2}Simulation Models}{22}{subsection.77}%
+\contentsline {section}{\numberline {3.4}Computation of Indicators}{27}{section.93}%
+\contentsline {chapter}{\numberline {4}Results and Discussion}{29}{chapter.96}%
+\contentsline {section}{\numberline {4.1}Stability Analysis in 10 Bus 4 Generator System}{29}{section.97}%
+\contentsline {subsection}{\numberline {4.1.1}Results for Indicator based on Coherency}{30}{subsection.102}%
+\contentsline {subsection}{\numberline {4.1.2}Results for Indicator based on Transient Energy Conversion}{31}{subsection.105}%
+\contentsline {subsection}{\numberline {4.1.3}Results for Indicator based on Dot Products (CSA)}{32}{subsection.108}%
+\contentsline {subsection}{\numberline {4.1.4}Results for Wide Area Severity Index (WASI)}{33}{subsection.111}%
+\contentsline {subsection}{\numberline {4.1.5}Results for Inter-area Stability Prediction Index (ISPI)}{34}{subsection.114}%
+\contentsline {section}{\numberline {4.2}Stability Analysis in Other Test Systems}{35}{section.117}%
+\contentsline {section}{\numberline {4.3}Discussion}{36}{section.119}%
+\contentsline {chapter}{\numberline {5}Conclusion and Future Scope}{38}{chapter.120}%
+\contentsline {section}{\numberline {5.1}Conclusion}{38}{section.121}%
+\contentsline {section}{\numberline {5.2}Future Scope}{39}{section.122}%
+\vspace {2em}
+\contentsline {chapter}{References}{40}{dummy.123}%

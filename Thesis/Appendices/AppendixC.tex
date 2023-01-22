@@ -1,0 +1,48 @@
+\chapter{Appendix C}
+
+\section*{Description of MATLAB Optimization functions}
+
+\subsection*{fmincon}
+The function \verb|fmincon| obtains the minimum of constrained nonlinear optimization problems. The details of the function are described below. 
+%\begin{IEEEeqnarray}{l}
+%\label{eq_fmin}
+%[x,fval] = fmincon(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon,options)
+%\end{IEEEeqnarray}
+\begin{verbatim}
+[x,fval] = fmincon(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon,options)
+\end{verbatim}
+\textit{where } \\ 
+\verb|x| is the vector of decision variable, for example, the power generation $P_i$, \\
+\verb|fval| is the vector containing minimized value of objective functions, for example, the minimum cost, \\
+\verb|fun| is the objective function to be minimized, for example, this may be a MATLAB M-file for computation of generation cost, \\
+\verb|x0| is the initial value of the decision variable, for example, the initial power generation vector,\\
+\verb|A.x| $\leq$ \verb|b| is the set of inequality constraints,\\
+\verb|Aeq.x=beq| is the set of equality constraints, for example, the power balance equation,\\
+\verb|lb| and \verb|ub| are lower and upper values of decision variables, for example, the generator limits,\\
+\verb|nonlcon| is the set of non-linear constraints,\\
+\verb|options| can be utilized to provide optimization options, for example, it can be used to choose the optimization algorithm amongst `interior-point ', `trust-region-reflective', `sqp' and `active-set' algorithms.
+
+\subsection*{fgoalattain}
+The function \verb|fgoalattain| obtains solution by minimizing deviation from the defined goals of each of the objectives. A set of pareto-optimal solutions are obtained by assigning different weights to each of the objectives. The details of the \verb|fgoalattain| function are described below.
+%\begin{IEEEeqnarray}{l}
+%\label{eq_fgoal}
+%\nonumber
+%[x,fval] = \\
+%fgoalattain(fun,x0,goal,weight,A,b,Aeq,beq,ub,lb,nonlcon,options)
+%\end{IEEEeqnarray}
+\begin{verbatim}
+[x,fval] = ...
+ fgoalattain(fun,x0,goal,weight,A,b,Aeq,beq,ub,lb,nonlcon,options)
+\end{verbatim}
+\textit{where } \\
+\verb|x| is the vector of decision variable i.e. the power generation $P_i$, \\
+\verb|fval| is the vector containing optimized values of objective functions, \\
+\verb|fun| is the objective function to be optimized, for example, this may be a MATLAB M-file for computation of generation cost and emission,\\ 
+\verb|x0| is the initial value of the decision variable,\\
+\verb|goal| is the vector of minimum values of objective functions when optimized separately,\\
+\verb|weight| is the vector of weights assigned to each objective in the pareto front,\\
+\verb|A.x| $\leq$ \verb|b| is the set of inequality constraint,s\\
+\verb|Aeq.x=beq| is the set of equality constraints,\\
+\verb|lb| and \verb|ub| are lower and upper values of decision variables, for example, the generator limits,\\
+\verb|nonlcon| is the set of non-linear constraints,\\
+\verb|options| can be utilized to provide function specific details such as display options.

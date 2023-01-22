@@ -1,0 +1,352 @@
+\documentclass[12pt,oneside,a4paper]{Thesis_PG}
+
+
+%\graphicspath{{C:/Users/RAJAT/Documents/MATLAB/Figures/ThesisFig/}}
+%\graphicspath{{C:/Users/RKSAMAL/Documents/MATLAB/Figures/ThesisFig/}}
+\usepackage{lineno,hyperref}
+\usepackage{layout}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{graphicx, caption, subcaption}
+%D:\subha\Subha\Project\Thesis\Figures
+\graphicspath{{D:/Subha/subha/Project/Thesis/Figures}}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{verbatim}
+\usepackage{tikz}
+\usetikzlibrary{matrix,shapes,arrows,positioning,chains,decorations.markings,calc}
+\usepackage{multirow}
+\usepackage[para]{threeparttable}
+\usepackage{footnote}
+\usepackage{amsmath}
+\usepackage{slashbox}
+\usepackage{makeidx}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+% The following packages are for proper fonts in the document. 
+\usepackage[T1]{fontenc} % not sure why it is required
+\usepackage{tgtermes}
+\usepackage{mathptmx}
+\usepackage{indentfirst}
+\usepackage{ragged2e}
+\captionsetup[figure]{labelfont={bf},name={Fig.},labelsep=period}
+\usepackage{float}
+%\usepackage{lmodern}
+%\usepackage{newtxtext}
+%\usepackage{newtxmath}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+
+%\newcommand{\sfunction}[1]{\textsf{\textsc{#1}}}
+%\algrenewcommand\algorithmicforall{\textbf{foreach}}
+%\algrenewcommand\algorithmicindent{0.1em}
+\usepackage{mathtools}
+
+
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\makeindex
+
+\linespread{1.5}
+
+\AtBeginDocument{\renewcommand{\bibname}{References}}
+
+\begin{document}
+\frontmatter      % Begin Roman style (i, ii, iii, iv...) page numbering
+\begingroup
+\makeatletter
+\@twosidefalse
+\makeatother
+
+%\onehalfspacing
+
+% Set up the Title Page
+\title  {EVALUATION OF CATASTROPHIC INDICATORS FOR POWER SYSTEM STABILITY ASSESSMENT}
+\authors  {\texorpdfstring
+            {\href{your web site or email address}{Subha Biswal}}
+            {Subha Biswal}
+            }
+\addresses  {\groupname\\\deptname\\\univname}  % Do not change this here, instead these must be set in the "Thesis.cls" file, please look through it instead
+\date       {April 2022}
+\subject    {}
+\keywords   {}
+
+\maketitle
+
+%% ----------------------------------------------------------------
+
+\setstretch{1.3}  % It is better to have smaller font and larger line spacing than the other way round
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+%\fancyhead{}  % Clears all page headers and footers
+%\rhead{\thepage}  % Sets the right side header to show the page number
+%\lhead{}  % Clears the left side page header
+
+\pagestyle{fancy}  % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+%insert logo and university name over the certificate-----------------------------
+\begin{center}
+\large \textbf{Dept. of Electrical Engineering}
+\\\large \textbf{VEER SURENDRA SAI UNIVERSITY OF TECHNOLOGY}
+\\{ \scalebox{0.1}{\includegraphics{VSSUTLogo.png}}}
+\end{center} 
+
+%start certificate----------------------------------------------------------------
+
+\Certificate {
+\addtocontents{toc}{\vspace{1em}} 
+
+\noindent This is to certify that the work contained in the Thesis Work entitled \textbf{“EVALUATION OF CATASTROPHIC INDICATORS FOR POWER SYSTEM STABILITY ASSESSMENT"}, submitted by \textbf{Subha Biswal} (Regd. No.: 1704050016) for the award of the degree of Master of Technology in Electrical Engineering during the Academic Year 2021-2022 to the \textbf{Veer Surendra Sai University of Technology, Burla}, is a record of bonafide research work carried out by him under my direct supervision and guidance. \\\\
+	\indent I considered that the Thesis work which is modified as per the suggestions of the examiners has reached all prescribed requirements of the rules and regulations relating to the nature of the degree. The contents incorporated have not been submitted elsewhere for the award of any other degree. \\\\\\
+
+\vspace{1em}
+\noindent
+\begin{tabular}[t]{@{}l} 
+\underline{\hspace{6.5cm}}\\Dr. Papia Ray\\\textbf{Head of the Department}\\Department of Electrical Engineering\\ VSSUT, Burla-768018 \\ Odisha, India
+\end{tabular}
+\hfill% move it to the right
+\begin{tabular}[t]{l@{}}
+\underline{\hspace{6.5cm}}\\Dr. Rajat Kanti Samal\\\textbf{Supervisor}\\Department of Electrical Engineering\\ VSSUT, Burla-768018 \\ Odisha, India
+\end{tabular}
+
+}
+\clearpage  % Certificate ended, now start a new page
+
+\newpage	
+%-----------------------------------------------------------------
+
+%insert logo and university name over the certificate-----------------------------
+\begin{center}
+\large \textbf{Dept. of Electrical Engineering}
+\\\large \textbf{VEER SURENDRA SAI UNIVERSITY OF TECHNOLOGY}
+\\{ \scalebox{0.1}{\includegraphics{VSSUTLogo.png}}}
+\end{center} 
+
+%Start Certificate of Approval-----------------------------------------------------
+\CApproval{
+\addtocontents{toc}{\vspace{1em}} 
+
+\noindent This is to certify that we have examined the thesis entitled \textbf{“EVALUATION OF CATASTROPHIC INDICATORS FOR POWER SYSTEM STABILITY ASSESSMENT"}, submitted by \textbf{Subha Biswal} (Regd. No.: 1704050016) in 
+partial fulfilment for the degree of \textbf{Master of Technology} with specialization in \textbf{Power System Engineering} at the Department of Electrical Engineering of \textbf{Veer Surendra Sai University of Technology, Burla, Odisha.} \\\\
+	\indent We hereby accord our approval of it as a thesis work carried out and presented in a manner required for its acceptance for the partial fulfilment for the award of degree of Master of Technology in Electrical Engineering with specialization in Power System Engineering for which it has been submitted. The approval does not necessarily endorse or accept every statement made, opinion expressed or conclusions drawn as recorded in this thesis. It only signifies the acceptance of the thesis for the purpose it has been submitted.
+ \\\\
+
+\vspace{1em}
+\noindent
+\begin{tabular}[t]{@{}l} 
+\underline{\hspace{3.7 cm}}\\\textbf{(Internal Examiner)}
+\end{tabular}
+\hfill% move it to the right
+\begin{tabular}[t]{l@{}}
+\underline{\hspace{3.7 cm}}\\\textbf{(External Examiner)}
+\end{tabular}
+\\\\\textbf{* Only in case thesis is approved.}
+}
+\clearpage  % Certificate ended, now start a new page
+
+\newpage	
+
+
+% ----------------------------------------------------------------
+% Declaration Page required for the Thesis, your institution may give you a different text to place here
+\Declaration{
+
+\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+
+I certify that:
+
+\begin{itemize} 
+\item[\tiny{$\blacksquare$}] The work contained in the thesis is original and has been done by myself under the supervision of my supervisor.
+ 
+\item[\tiny{$\blacksquare$}] The work has not been submitted to any other Institute for any degree or diploma.
+ 
+\item[\tiny{$\blacksquare$}] I have conformed to the norms and guidelines given in the Ethical Code of Conduct of the Institute.
+ 
+\item[\tiny{$\blacksquare$}] Whenever I have used materials (data, theoretical analysis, and text) from other sources, I have given due credit to them by citing them in the text of the thesis and giving their details in the references.
+ 
+\item[\tiny{$\blacksquare$}] Whenever I have quoted written materials from other sources, due credit is given to the sources by citing them.
+ 
+\item[\tiny{$\blacksquare$}] From the plagiarism test, it is found that the similarity index of whole thesis is within 10\% as prescribed by the university guidelines.
+\\\\\\
+\end{itemize}
+ 
+ 
+\begin{tabular}[t]{@{}l} 
+Date: \\  Place: 
+\end{tabular}
+\hfill% move it to the right
+\begin{tabular}[t]{l@{}}
+Subha Biswal\\ Regd. No. 1704050016
+\end{tabular}
+}
+
+
+\clearpage  % Declaration ended, now start a new page
+%-------------------------------------------------------------------------------
+% The Acknowledgements page, for thanking everyone
+\hspace{1cm} \\
+\acknowledgements{
+\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+It is always a pleasure to remind the fine people in the \textbf{Department of Electrical Engineering, Veer Surendra Sai University of Technology} for their sincere guidance I received to finish my Thesis. I would like to express my deepest gratitude and admiration to \textbf{Dr. Rajat Kanti Samal, Asst. Professor, Department of Electrical Engineering,} for his help and patience throughout this project. His excellent guidance, support and
+invaluable assistance made my working and learning experience a very special one. This Thesis would not have been completed without his constant inspiration and encouragement.
+
+I am immensely grateful to \textbf{Dr. (Ms.) Papia Ray , H.O.D, Department of Electrical Engineering,} for her support through the years and believe that the Thesis would not stand successful had not been for her. I express my gratitude to every faculty who helped shape the knowledge base that made the Thesis tale its present form.
+
+In addition, I would like to thank my parents for their wise counsel, unfailing support and continuous encouragement throughout my years of study. Finally, I thank to my friend, Ritusmita Dhal, without whose support It could not have possible to give a finish touch to this thesis and she also helped in reviewing and finding errors, as well as a happy distractions to rest my mind outside of my research.\\\\\\\\
+
+
+
+
+
+\begin{flushright}
+Subha Biswal\\
+(1704050016)
+\end{flushright}
+}
+
+\clearpage  % End of the Acknowledgements
+%% ----------------------------------------------------------------
+
+%% The Abstract Page-------------------------------------------------
+\abstractrks{
+\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+Any viable on-line dynamic security analysis (DSA) is intended to include fast contingency assessment . The usage of severity indices in the evaluation of contingencies is required, and for DSA, such an indicator must be a measurement of stability. In static security analysis, it is generally established that some indices outperform others for specific power systems, and that groupings of indices outperform a single indicator. Severity indices are more complex in DSA, which is still in its development, and only a handful have been tried for screening. Rather of sophisticated indices, this work proposes numerous simple indices for contingency screening.Again after disturbance has been addressed, these indicators are focused on coherency, transient energy conversion between kinetic and potential energy, dot products, and generator coupling parameters. One of the proposed indicators can detect inter-area stability issues using primarily two parameters: voltage magnitude change (decrease) and phase shift (separation). The most essential feature of this index is that it can be derived fast and readily from synchronously measured voltage without requiring system modelling or simulation, and it is not affected by network size. This research compares and contrasts different methods for detecting Out of Step (OOS) as an early indicator. On the IEEE 10-Bus Test System as well as other selected sample test systems, the analysis is performed using MAT-POWER and MATTRANS software in combination. Experiments indicated that these indications give a significantly earlier and more accurate identification of OOS, allowing for quick intervention to restore system stability.
+  \\
+
+\textbf{\textit{Keywords:}} Centre of Inertia, Dynamic Security Assessment, Phasor Measurement Unit, Out of Step, Transient Stability, Contingency Screening, Severity Index, Catastrophic Indicators
+
+}
+
+\clearpage  % Abstract ended, start a new page
+%% ----------------------------------------------------------------
+
+\setstretch{1.3}  % Reset the line-spacing to 1.3 for body text (if it has changed)
+
+\pagestyle{fancy}  %The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+
+\tableofcontents  % Write out the Table of Contents
+
+%\listoffigures  % Write out the List of Figures
+{
+\let\oldnumberline\numberline%
+\renewcommand{\numberline}{\figurename~\oldnumberline}
+\listoffigures  % Write out the List of Figures
+}
+
+%\listoftables  % Write out the List of Tables
+{
+\let\oldnumberline\numberline%
+\renewcommand{\numberline}{\tablename~\oldnumberline}
+\listoftables  % Write out the List of Tables
+}
+%% ----------------------------------------------------------------
+\setstretch{1.5}  % Set the line spacing to 1.5, this makes the following tables easier to read
+\clearpage  % Start a new page
+%\lhead{\emph{Abbreviations}}  % Set the left side page header to "Abbreviations"
+\listofnomenclature{ll}  % Include a list of Abbreviations (a table of two columns)
+{
+% \textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+\textbf{\(\omega_i\)} & Speed of \(i_{t_h}\) Generator \\
+\textbf{\(\delta_i\)} & Rotor Angle of \(i_{t_h}\) Generator \\
+\textbf{$\delta_i(0^+)$} & Post Fault Value of Rotor Angle of \(i_{t_h}\) Generator\\
+\textbf{\(P_{e_i}\)} & Electrical Power of \(i_{t_h}\) Generator \\
+\textbf{\(P_{m_i}\)} & Mechanical Power of \(i_{t_h}\) Generator\\
+\textbf{\(M_k\)} & Inertia of \(k_{th}\) Generator\\
+\textbf{\(M_i\)} & Cumulative Inertia of \(i_{t_h}\) Generator\\
+\textbf{\(\omega\)} & Synchronous Speed or Speed of the System\\
+\textbf{\(N_{g_i}\)} & Number of Generators in the \(i_{th}\) Area\\
+\textbf{\(N_g\)} & Total Number of Generators.\\
+\textbf{\(\delta_{k}^{COI_i}\)} & The Relative Rotor Angle Deviation of a Generator Related to its Area\\
+\textbf{\(\delta_{i}^{COI_System}\)} & The Relative Rotor Angle Deviation of an Area Referred to its System\\
+\textbf{\(t_{cl}\)} & Fault Clearance Time\\
+\textbf{\(T\)} & Length of Short Period After Fault Clearing\\
+\textbf{$C_i(t)$} & CSA (Contingency Severity Assessment)\\
+\textbf{$\big(PSD\big(C_i(t)\big)\big)$} & Power Spectral Density of dot Product CSA\\
+\textbf{$\delta cri$} & Angular Deviations from Equivalent Center of Inertia (ECOI)\\
+\textbf{$\delta norm$} & Maximum Angular Variations from ECOI\\
+\textbf{$V_{min}$} & Minimum Voltage Magnitude\\
+\textbf{$\Delta V_{ref}$} & Voltage Separation from ECOI during Time $\Delta t$\\
+\textbf{$V'_{ref}$} & Rate of Change of Voltage\\
+
+
+}
+%% ----------------------------------------------------------------
+\setstretch{1.5}  % Set the line spacing to 1.5, this makes the following tables easier to read
+\clearpage  % Start a new page
+%\lhead{\emph{Abbreviations}}  % Set the left side page header to "Abbreviations"
+\listofsymbols{ll}  % Include a list of Abbreviations (a table of two columns)
+{
+% \textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+\textbf{TEF} & Transient Energy Function \\
+\textbf{PMU} & Phasor Measurement Unit \\
+\textbf{CSA} & Contingency Severity Assessment \\
+\textbf{ECI} & Equivalent Center of Inertia\\
+\textbf{WASI} & WideArea Severity Index\\
+\textbf{ISPI} & Interarea Stability Prediction Index\\
+\textbf{DSA} & Dynamic Security Assessment\\
+\textbf{SCADA} & Supervisory Control and Data Acquisition\\
+\textbf{OPF} & Optimal Power Flow\\
+\textbf{DSAC} & Dynamic Security Appraisal\\
+\textbf{EHV} & Extra High Voltage\\
+%\textbf{IEEE} & Institute of Electrical and Electronics Engineers.\\
+%\textbf{KMD} & Koopman Mode Decomposition \\
+\textbf{TTC} & Total Transfer Capability\\
+\textbf{VAR} & Volt-Amps Reactive\\
+\textbf{TCR} & Thyristor Controlled Reactor \\
+\textbf{RES} & Renewable Energy Sources \\
+
+\textbf{ECOI} & Equivalent Center of Inertia \\
+\textbf{FACTS} & Flexible AC Transmission System \\
+\textbf{COI} & Centre of Inertia\\
+\textbf{RF} & Random Forest\\
+\textbf{OOS} & Out of Step\\
+\textbf{DT} &  Decision Tree\\
+\textbf{TEC} & Transient Energy Conversion\\
+\textbf{PDC} & Phasor Data Concentrator\\
+%\textbf{DT} & \\
+%\textbf{DT} & \\
+%\textbf{DT} & \\
+%\textbf{DT} & \\
+%\textbf{DT} & \\
+%\textbf{DT} & \\
+%\textbf{DT} & \\
+%\textbf{DT} & \\
+%\textbf{DT} & \\
+
+
+}
+
+
+\endgroup
+
+\begingroup
+%% ----------------------------------------------------------------
+\mainmatter	  % Begin normal, numeric (1,2,3...) page numbering
+%\onehalfspacing
+%\doublespacing
+
+\pagestyle{fancy}  % Return the page headers back to the "fancy" style
+
+\input{Chapters/Chapter1} % Introduction and objectives
+\input{Chapters/Chapter2} % Problem Formulation
+\input{Chapters/Chapter3} % Descrition of Software
+\input{Chapters/Chapter4} % Results and Discussion
+\input{Chapters/Chapter5} % Conclusion
+
+
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\endgroup
+
+\backmatter
+
+\cleardoublepage
+\input{Chapters/References} % References
+
+
+
+
+\end{document}
